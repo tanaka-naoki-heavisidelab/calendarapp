@@ -1,0 +1,21 @@
+{
+    "name": "svelte_template",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "svelteapp",
+    "workspaceFolder": "/home/appuser/devcon",
+    "shutdownAction": "stopCompose",
+    "remoteUser": "appuser",
+    "updateRemoteUserUID": true,
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "terminal.integrated.defaultProfile.linux": "bash"
+        },
+        "extensions": [
+            "mhutchie.git-graph",
+            "svelte.svelte-vscode",
+            "ardenivanov.svelte-intellisense"
+        ]
+      }
+    }
+}

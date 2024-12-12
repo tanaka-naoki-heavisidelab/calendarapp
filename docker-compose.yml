@@ -1,0 +1,15 @@
+services:
+  svelteapp:
+    build:
+      context: ./
+      args:
+        MY_UID: ${MY_UID}
+        MY_GID: ${MY_GID}
+        PORT_FRNT: ${PORT_FRNT}
+    env_file:
+      - .env
+    volumes:
+      - .:/home/appuser/devcon
+    ports:
+      - ${PORT_FRNT}:${PORT_FRNT}
+    command: ["/bin/bash", "-c", "/home/appuser/devcon/build.sh"]
